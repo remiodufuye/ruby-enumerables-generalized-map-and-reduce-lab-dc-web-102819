@@ -16,7 +16,7 @@ def reduce(block, sp=nil)
     accum = sp
     i = 0
   else
-    accum = s[0]
+    accum = block[0]
     i = 1
   end
   while i < block.length
