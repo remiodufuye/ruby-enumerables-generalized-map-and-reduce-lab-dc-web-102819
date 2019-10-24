@@ -1,10 +1,10 @@
 # Your Code Here
 
-def map(s)
+def map(block)
   new = []
   i = 0
-  while i < s.length
-    new.push(yield(s[i]))
+  while i < block.length
+    new.push(yield(block[i]))
     i += 1
   end
   new
