@@ -11,9 +11,9 @@ def map(block)
 end
 
 
-def reduce(block, sp=nil)
-  if sp
-    accum = sp
+def reduce(block, special_condition =nil)
+  if special_condition
+    accum = special_condition
     i = 0
   else
     accum = block[0]
