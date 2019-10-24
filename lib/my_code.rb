@@ -17,13 +17,13 @@ def reduce(block, special_condition =nil)
     accumulate_total = special_condition
     i = 0
   else
-    accum = block[0]
+    accumulate_total = block[0]
     i = 1
   end
   while i < block.length
-    accum = yield(accum, block[i])
+    accumulate_total = yield(accumulate_total, block[i])
     i += 1
   end
-  accum
+  accumulate_total
 end
     
