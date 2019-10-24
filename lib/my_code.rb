@@ -11,7 +11,7 @@ def map(block)
 end
 
 
-def reduce(s, sp=nil)
+def reduce(block, sp=nil)
   if sp
     accum = sp
     i = 0
@@ -19,8 +19,8 @@ def reduce(s, sp=nil)
     accum = s[0]
     i = 1
   end
-  while i < s.length
-    accum = yield(accum, s[i])
+  while i < block.length
+    accum = yield(accum, block[i])
     i += 1
   end
   accum
