@@ -14,7 +14,7 @@ end
 def reduce(block, special_condition =nil)
   
   if special_condition
-    accum = special_condition
+    accumulate_total = special_condition
     i = 0
   else
     accum = block[0]
